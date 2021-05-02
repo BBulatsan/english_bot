@@ -11,7 +11,7 @@ bot.send_message(env.id_users[0], '/start')
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Ну привет!')
+    bot.send_message(message.chat.id, 'Hello, this is a privat bot!')
     if message.chat.id in env.id_users:
         bot.send_message(message.chat.id, f"Access is allowed! \nYour id:{message.chat.id}")
         time.sleep(5)
